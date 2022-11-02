@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "lib": ["es6", "dom"],
+    "allowJs": false,
+    "jsx": "react",
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true
+  },
+  "exclude": ["node_modules", "dist", "public", "tests"]
+}
