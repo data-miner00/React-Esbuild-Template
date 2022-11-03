@@ -1,19 +1,24 @@
 {
-  "name": "esbuild",
+  "name": "react-esbuild-template",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Opinionated React Template powered by ESBuild.",
+  "main": "src/index.tsx",
   "scripts": {
     "watch": "node esbuild.config.js",
-    "build": "esbuild src/App.jsx --bundle --minify --outfile=public/dist/bundle.js",
-    "build-ts": "esbuild src/App.tsx --bundle --minify --sourcemap --outfile=public/dist/bundle.js",
+    "build": "esbuild src/index.tsx --bundle --minify --outfile=public/dist/bundle.js",
     "start": "lite-server",
     "lint": "eslint src/**/*.tsx",
     "test": "jest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "react",
+    "esbuild",
+    "eslint",
+    "jest",
+    "typescript"
+  ],
+  "author": "shaun",
+  "license": "MIT",
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

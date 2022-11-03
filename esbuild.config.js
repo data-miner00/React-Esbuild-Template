@@ -1,6 +1,6 @@
 require("esbuild")
   .build({
-    entryPoints: ["src/App.tsx"],
+    entryPoints: ["src/index.tsx"],
     bundle: true,
     minify: false,
     format: "cjs",
