@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export function Header() {
   return (
@@ -11,6 +12,8 @@ export function Header() {
     >
       <div className="logo">Logod</div>
       <div className="login">Lodgin</div>
+      <Link to="/">Home</Link>
+      <Link to="/profile">Profile</Link>
     </header>
   );
 }
