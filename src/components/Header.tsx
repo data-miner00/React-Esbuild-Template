@@ -14,6 +14,7 @@ export function Header() {
       <div className="login">Lodgin</div>
       <Link to="/">Home</Link>
       <Link to="/profile">Profile</Link>
+      <Link to="/about">About</Link>
     </header>
   );
 }
