@@ -174,6 +174,7 @@ _To use this template for personal use or contribution, simply perform the follo
 - [x] Add ESLint
 - [x] Add Jest/Testing Library
 - [x] Add React Router (Lazy Loading)
+- [x] Add 404 page
 - [ ] Add Styling
   - [ ] Sass
   - [x] Tailwind
