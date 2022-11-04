@@ -5,6 +5,8 @@ import { Header } from "./components/Header";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 
+import "./App.css";
+
 const App = () => (
   <div>
     <Header />
