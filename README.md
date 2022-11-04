@@ -124,7 +124,7 @@ The list of tools that is used when development.
 
 ### Installation
 
-_To use this template for personal use or contribution, simply_
+_To use this template for personal use or contribution, simply perform the following._ Do note that a total of **3 terminals** are required to get the entire application up and running for development.
 
 1. Clone the repo
    ```sh
@@ -146,17 +146,22 @@ _To use this template for personal use or contribution, simply_
    ```sh
    pnpm lint
    ```
-6. Start Esbuild
+6. Start Esbuild (requires 1 terminal)
    ```sh
    pnpm watch
    ```
-7. Finally start local dev server
+7. Start Tailwind JIT (requires 1 terminal)
+   ```sh
+   pnpm watch:tw
+   ```
+8. Finally start local dev server (requires 1 terminal)
    ```sh
    pnpm start
    ```
-8. Compile for production
+9. Compile for production
    ```sh
-   pnpm build-ts
+   pnpm build:tw
+   pnpm build
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -168,10 +173,10 @@ _To use this template for personal use or contribution, simply_
 - [x] Add TypeScript
 - [x] Add ESLint
 - [x] Add Jest/Testing Library
-- [ ] Add React Router (Lazy Loading)
+- [x] Add React Router (Lazy Loading)
 - [ ] Add Styling
   - [ ] Sass
-  - [ ] Tailwind
+  - [x] Tailwind
 - [ ] Add i18n
   - [ ] Korean
   - [ ] Japanese
