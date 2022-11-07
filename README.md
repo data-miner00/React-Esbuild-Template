@@ -221,6 +221,7 @@ List of resources that are helpful and would like to give credit to.
 - [Why You Should Use ESBuild OVER Webpack for React Projects](https://www.youtube.com/watch?v=VmgRBwMIRBE)
 - [esbuild homepage](https://esbuild.github.io/)
 - [SyntaxError: Support for the experimental syntax jsx isn’t currently enabled](https://akashmittal.com/code-example-syntaxerror-support-for-the-experimental-syntax-jsx-isnt-currently-enabled/)
+- [Robots.txt](https://developers.google.com/search/docs/crawling-indexing/robots/intro)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
