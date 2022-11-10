@@ -1,6 +1,6 @@
 import React from "react";
 
-function Profile() {
+function Profile(): JSX.Element {
   return (
     <>
       <h1>Profile page</h1>
