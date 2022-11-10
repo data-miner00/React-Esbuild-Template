@@ -1,7 +1,7 @@
 import React, { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 
-import { Header } from "./components/Header";
+import Header from "./components/Header";
 import "./App.css";
 
 const Home = lazy(() => import("./pages/Home"));
