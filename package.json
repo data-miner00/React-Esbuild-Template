@@ -11,7 +11,8 @@
     "test": "jest",
     "watch:tw": "tailwindcss -i ./src/index.css -o ./public/dist/tailwind.css --watch",
     "build:tw": "tailwindcss -i ./src/index.css -o ./public/dist/tailwind.css --minify",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "purge": "node scripts/purgeDist.js ./public/dist"
   },
   "keywords": [
     "react",
