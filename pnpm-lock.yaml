@@ -15,6 +15,7 @@ specifiers:
   esbuild: ^0.15.12
   esbuild-plugin-inline-image: ^0.0.8
   eslint: ^8.0.1
+  eslint-config-prettier: ^8.5.0
   eslint-config-standard-with-typescript: ^23.0.0
   eslint-plugin-import: ^2.25.2
   eslint-plugin-n: ^15.0.0
@@ -55,6 +56,7 @@ devDependencies:
   esbuild: 0.15.12
   esbuild-plugin-inline-image: 0.0.8
   eslint: 8.26.0
+  eslint-config-prettier: 8.5.0_eslint@8.26.0
   eslint-config-standard-with-typescript: 23.0.0_cuhm7w6dppd435hmbz5wtjkgum
   eslint-plugin-import: 2.26.0_5aea5dp4n23mfv4y2mmjxole3e
   eslint-plugin-n: 15.4.0_eslint@8.26.0
@@ -2447,6 +2449,15 @@ packages:
       optionator: 0.8.3
     optionalDependencies:
       source-map: 0.6.1
+    dev: true
+
+  /eslint-config-prettier/8.5.0_eslint@8.26.0:
+    resolution: {integrity: sha512-obmWKLUNCnhtQRKc+tmnYuQl0pFU1ibYJQ5BGhTVB08bHe9wC8qUeG7c08dj9XX+AuPj1YSGSQIHl1pnDHZR0Q==}
+    hasBin: true
+    peerDependencies:
+      eslint: '>=7.0.0'
+    dependencies:
+      eslint: 8.26.0
     dev: true
 
   /eslint-config-standard-with-typescript/23.0.0_cuhm7w6dppd435hmbz5wtjkgum:
