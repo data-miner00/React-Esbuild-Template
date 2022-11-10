@@ -13,6 +13,7 @@ specifiers:
   '@typescript-eslint/parser': ^5.42.0
   autoprefixer: ^10.4.13
   esbuild: ^0.15.12
+  esbuild-plugin-inline-image: ^0.0.8
   eslint: ^8.0.1
   eslint-config-standard-with-typescript: ^23.0.0
   eslint-plugin-import: ^2.25.2
@@ -51,6 +52,7 @@ devDependencies:
   '@typescript-eslint/parser': 5.42.0_wyqvi574yv7oiwfeinomdzmc3m
   autoprefixer: 10.4.13_postcss@8.4.18
   esbuild: 0.15.12
+  esbuild-plugin-inline-image: 0.0.8
   eslint: 8.26.0
   eslint-config-standard-with-typescript: 23.0.0_cuhm7w6dppd435hmbz5wtjkgum
   eslint-plugin-import: 2.26.0_5aea5dp4n23mfv4y2mmjxole3e
@@ -2337,6 +2339,10 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /esbuild-plugin-inline-image/0.0.8:
+    resolution: {integrity: sha512-L2Wwq7z9HALpq2hfxYHfQrrIyl/ivfRgiAULohVC/WKrGydPzfANGCrt5wSlxxWW4fuiPOc3BIA9Yp00h2QPVQ==}
+    dev: true
 
   /esbuild-sunos-64/0.15.12:
     resolution: {integrity: sha512-nkl251DpoWoBO9Eq9aFdoIt2yYmp4I3kvQjba3jFKlMXuqQ9A4q+JaqdkCouG3DHgAGnzshzaGu6xofGcXyPXg==}
