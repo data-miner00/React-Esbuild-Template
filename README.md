@@ -146,23 +146,31 @@ _To use this template for personal use or contribution, simply perform the follo
    ```sh
    pnpm lint
    ```
-6. Start Esbuild (requires 1 terminal)
+6. Run formatter to format code
+   ```sh
+   pnpm format
+   ```
+7. Start Esbuild (requires 1 terminal)
    ```sh
    pnpm watch
    ```
-7. Start Tailwind JIT (requires 1 terminal)
+8. Start Tailwind JIT (requires 1 terminal)
    ```sh
    pnpm watch:tw
    ```
-8. Finally start local dev server (requires 1 terminal)
+9. Finally start local dev server (requires 1 terminal)
    ```sh
    pnpm start
    ```
-9. Compile for production
-   ```sh
-   pnpm build:tw
-   pnpm build
-   ```
+10. Compile for production
+    ```sh
+    pnpm build:tw
+    pnpm build
+    ```
+11. Purge dist folder
+    ```sh
+    pnpm purge
+    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -222,6 +230,9 @@ List of resources that are helpful and would like to give credit to.
 - [esbuild homepage](https://esbuild.github.io/)
 - [SyntaxError: Support for the experimental syntax jsx isn’t currently enabled](https://akashmittal.com/code-example-syntaxerror-support-for-the-experimental-syntax-jsx-isnt-currently-enabled/)
 - [Robots.txt](https://developers.google.com/search/docs/crawling-indexing/robots/intro)
+- [useHooks](https://usehooks.com/)
+- [Configuring Public Path](https://esbuild.github.io/api/#public-path)
+- [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier#installation)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
