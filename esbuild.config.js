@@ -1,4 +1,7 @@
-require("esbuild")
+var esbuild = require("esbuild");
+var inlineImage = require("esbuild-plugin-inline-image");
+
+esbuild
   .build({
     entryPoints: ["src/index.tsx"],
     bundle: true,
@@ -6,6 +9,13 @@ require("esbuild")
     format: "cjs",
     sourcemap: false,
     outfile: "public/dist/bundle.js",
+    plugins: [inlineImage()],
+    publicPath: "/dist",
+    loader: {
+      ".png": "file",
+      ".svg": "file",
+      ".jpg": "file",
+    },
     watch: {
       onRebuild(error, result) {
         var now = new Date();
