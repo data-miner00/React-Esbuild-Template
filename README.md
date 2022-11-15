@@ -190,6 +190,11 @@ _To use this template for personal use or contribution, simply perform the follo
   - [ ] Korean
   - [ ] Japanese
   - [ ] Chinese
+- [ ] Authentication
+  - [ ] OAuth 2.0? OpenID Connect?
+- [ ] Prisma
+- [ ] Dark mode
+- [ ] Add GitHub workflows
 
 See the [open issues](https://github.com/data-miner00/React-Esbuild-Template/issues) for a full list of proposed features (and known issues).
 
@@ -233,6 +238,7 @@ List of resources that are helpful and would like to give credit to.
 - [useHooks](https://usehooks.com/)
 - [Configuring Public Path](https://esbuild.github.io/api/#public-path)
 - [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier#installation)
+- [Issue Template](https://github.com/Josee9988/project-template)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
