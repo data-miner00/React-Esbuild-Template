@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Header(): JSX.Element {
+import ThemeSwitcher from "./ThemeSwitcher";
+
+function Header(): JSX.Element {
   return (
     <header className="">
       <div className="max-w-[1400px] mx-auto md:px-8 items-center flex justify-between h-24">
@@ -18,8 +20,11 @@ export default function Header(): JSX.Element {
           <Link to="/about" className="px-4 font-semibold">
             About
           </Link>
+          <ThemeSwitcher />
         </nav>
       </div>
     </header>
   );
 }
+
+export default Header;
