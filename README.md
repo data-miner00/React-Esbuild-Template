@@ -193,8 +193,9 @@ _To use this template for personal use or contribution, simply perform the follo
 - [ ] Authentication
   - [ ] OAuth 2.0? OpenID Connect?
 - [ ] Prisma
-- [ ] Dark mode
+- [x] Dark mode
 - [ ] Add GitHub workflows
+- [ ] Add PWA Manifest
 
 See the [open issues](https://github.com/data-miner00/React-Esbuild-Template/issues) for a full list of proposed features (and known issues).
 
