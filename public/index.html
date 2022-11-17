@@ -13,8 +13,17 @@
     <title>React ESBuild</title>
     <link rel="stylesheet" href="/dist/bundle.css" />
     <link rel="stylesheet" href="/dist/tailwind.css" />
+    <script>
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
   </head>
-  <body class="bg-gray-100 dark:bg-slate-700 text-slate-700 dark:text-gray-50">
+  <body class="bg-gray-100 dark:bg-gray-700 text-slate-700 dark:text-gray-50">
     <div id="root"></div>
 
     <noscript
