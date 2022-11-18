@@ -83,6 +83,8 @@ The technologies and tools used within this template.
 - ESLint
 - TypeScript
 - Jest/Testing Library
+- TailwindCSS
+- Framer Motion
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -183,6 +185,7 @@ _To use this template for personal use or contribution, simply perform the follo
 - [x] Add Jest/Testing Library
 - [x] Add React Router (Lazy Loading)
 - [x] Add 404 page
+- [x] Add Framer Motion
 - [ ] Add Styling
   - [ ] Sass
   - [x] Tailwind

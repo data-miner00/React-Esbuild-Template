@@ -8,6 +8,7 @@ it("renders the content with props correctly", () => {
     title: "My cool technology",
     description: "This is my very cool description",
     url: "https://www.my-cool-tech.com",
+    delay: 0,
   };
   render(<StackCard {...props} />);
 
