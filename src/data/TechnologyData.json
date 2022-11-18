@@ -33,5 +33,10 @@
     "title": "TypeScript",
     "description": "Strongly typed programming language for JavaScript",
     "url": "https://www.typescriptlang.org/"
+  },
+  {
+    "title": "Framer Motion",
+    "description": "A rich and extensive motion library for React",
+    "url": "https://www.framer.com/motion/"
   }
 ]
