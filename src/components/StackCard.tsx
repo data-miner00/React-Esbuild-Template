@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export type Props = {
+export interface Props {
   title: string;
   description: string;
   url: string;
   delay: number;
-};
+}
 
 function StackCard({ title, description, url, delay }: Props): JSX.Element {
   return (
