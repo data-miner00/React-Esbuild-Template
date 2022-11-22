@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: Unit Test Repository
+    name: Node.js Workflow
     runs-on: ubuntu-latest
 
     steps:
