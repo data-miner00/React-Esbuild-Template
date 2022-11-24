@@ -1,5 +1,20 @@
 var esbuild = require("esbuild");
 var inlineImage = require("esbuild-plugin-inline-image");
+var dotenv = require("dotenv");
+
+dotenv.config();
+
+var variables = {};
+
+Object.keys(process.env)
+  .filter((k) => k.startsWith("REACT_APP_"))
+  .forEach((k) => (variables[k] = process.env[k]));
+
+var define = {
+  process: JSON.stringify({
+    env: variables,
+  }),
+};
 
 esbuild
   .build({
@@ -16,6 +31,7 @@ esbuild
       ".svg": "file",
       ".jpg": "file",
     },
+    define,
     watch: {
       onRebuild(error, result) {
         var now = new Date();
