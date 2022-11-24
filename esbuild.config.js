@@ -4,13 +4,17 @@ var dotenv = require("dotenv");
 
 dotenv.config();
 
-var define = {};
+var variables = {};
 
-for (const k in process.env) {
-  if (k.startsWith("REACT_APP_")) {
-    define[`process.env.${k}`] = JSON.stringify(process.env[k]);
-  }
-}
+Object.keys(process.env)
+  .filter((k) => k.startsWith("REACT_APP_"))
+  .forEach((k) => (variables[k] = process.env[k]));
+
+var define = {
+  process: JSON.stringify({
+    env: variables,
+  }),
+};
 
 esbuild
   .build({
