@@ -243,6 +243,7 @@ List of resources that are helpful and would like to give credit to.
 - [Configuring Public Path](https://esbuild.github.io/api/#public-path)
 - [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier#installation)
 - [Issue Template](https://github.com/Josee9988/project-template)
+- [[Feature] read substitution variables from .env file](https://github.com/evanw/esbuild/issues/69#issuecomment-1324478979)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
