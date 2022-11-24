@@ -85,6 +85,7 @@ The technologies and tools used within this template.
 - Jest/Testing Library
 - TailwindCSS
 - Framer Motion
+- GitHub Workflow
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -197,7 +198,7 @@ _To use this template for personal use or contribution, simply perform the follo
   - [ ] OAuth 2.0? OpenID Connect?
 - [ ] Prisma
 - [x] Dark mode
-- [ ] Add GitHub workflows
+- [x] Add GitHub workflows
 - [ ] Add PWA Manifest
 
 See the [open issues](https://github.com/data-miner00/React-Esbuild-Template/issues) for a full list of proposed features (and known issues).
@@ -244,6 +245,10 @@ List of resources that are helpful and would like to give credit to.
 - [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier#installation)
 - [Issue Template](https://github.com/Josee9988/project-template)
 - [[Feature] read substitution variables from .env file](https://github.com/evanw/esbuild/issues/69#issuecomment-1324478979)
+- [ESLint Typescript](https://typescript-eslint.io/)
+- [GitHub Actions](https://github.com/marketplace?type=actions)
+- [Pnpm CI](https://pnpm.io/continuous-integration)
+- [global is not defined](https://github.com/WalletConnect/walletconnect-monorepo/issues/1144)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
