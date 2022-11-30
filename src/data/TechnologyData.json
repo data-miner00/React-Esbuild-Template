@@ -38,5 +38,10 @@
     "title": "Framer Motion",
     "description": "A rich and extensive motion library for React",
     "url": "https://www.framer.com/motion/"
+  },
+  {
+    "title": "i18next",
+    "description": "An excellent internationalization framework for JavaScript",
+    "url": "https://react.i18next.com/"
   }
 ]
