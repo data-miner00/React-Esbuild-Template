@@ -3,5 +3,6 @@
   "template_description": "Batteries included React template that supercharges your development.",
   "home": "Home",
   "profile": "Profile",
-  "about": "About"
+  "about": "About",
+  "documentation": "Documentation"
 }
