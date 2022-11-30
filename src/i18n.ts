@@ -10,7 +10,7 @@ i18n.use(initReactI18next).init({
       translations: require("./locales/ja/translations.json"),
     },
   },
-  lng: "en",
+  lng: localStorage.locale ?? "en",
   fallbackLng: "en",
   ns: ["translations"],
   defaultNS: "translations",
