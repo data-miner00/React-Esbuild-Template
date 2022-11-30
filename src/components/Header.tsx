@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import ThemeSwitcher from "./ThemeSwitcher";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 function Header(): JSX.Element {
   return (
@@ -21,6 +22,7 @@ function Header(): JSX.Element {
             About
           </Link>
           <ThemeSwitcher />
+          <LanguageSwitcher />
         </nav>
       </div>
     </header>
