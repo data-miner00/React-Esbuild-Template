@@ -6,7 +6,7 @@ function LanguageSwitcher(): JSX.Element {
   const { i18n } = useTranslation();
 
   function handleLanguageSwitch(locale: string): void {
-    i18n.changeLanguage(locale);
+    void i18n.changeLanguage(locale);
     localStorage.locale = locale;
     setPopoverOpen((state) => !state);
   }
