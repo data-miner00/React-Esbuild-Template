@@ -55,7 +55,7 @@ function Home(): JSX.Element {
             key={index}
             delay={index}
             title={data.title}
-            description={data.description}
+            description={t(data.title)}
             url={data.url}
           />
         ))}
