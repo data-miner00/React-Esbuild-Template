@@ -1,3 +1,7 @@
 {
-  "hello": "Hello World"
+  "template_title": "The Ultimate Template",
+  "template_description": "Batteries included React template that supercharges your development.",
+  "home": "Home",
+  "profile": "Profile",
+  "about": "About"
 }

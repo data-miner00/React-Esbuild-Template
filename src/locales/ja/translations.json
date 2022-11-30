@@ -1,3 +1,7 @@
 {
-  "hello": "World Hello"
+  "template_title": "究極のテンプレート",
+  "template_description": "この豊富な機能を備えるテンプレートはアプリが速く構築の事をできます。",
+  "home": "ホーム",
+  "profile": "プロフィール",
+  "about": "私達"
 }

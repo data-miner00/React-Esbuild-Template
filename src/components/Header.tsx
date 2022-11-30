@@ -1,10 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import ThemeSwitcher from "./ThemeSwitcher";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 function Header(): JSX.Element {
+  const { t } = useTranslation();
+
   return (
     <header className="">
       <div className="max-w-[1400px] mx-auto md:px-8 items-center flex justify-between h-24">
@@ -13,13 +16,13 @@ function Header(): JSX.Element {
         </div>
         <nav className="flex">
           <Link to="/" className="px-4 font-semibold">
-            Home
+            {t("home")}
           </Link>
           <Link to="/profile" className="px-4 font-semibold">
-            Profile
+            {t("profile")}
           </Link>
           <Link to="/about" className="px-4 font-semibold">
-            About
+            {t("about")}
           </Link>
           <ThemeSwitcher />
           <LanguageSwitcher />
