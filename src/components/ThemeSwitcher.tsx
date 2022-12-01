@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function ThemeSwitcher(): JSX.Element {
-  const [theme, setTheme] = useState<string>(localStorage.theme);
+  const [theme, setTheme] = useState<string>(localStorage.theme ?? "light");
 
   function switchTheme(): void {
     if (theme === "light") {
