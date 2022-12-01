@@ -61,7 +61,9 @@
 
 ## About The Project
 
-An extremely opinionated combo for building React applications. Focus on the application itself rather than all these low-level configuration stuffs.
+![Template screenshot](/public/assets/screenshot.png)
+
+An extremely opinionated template for building React applications. Focus on the application itself rather than all these low-level configuration stuffs.
 
 Incentives:
 
@@ -187,12 +189,12 @@ _To use this template for personal use or contribution, simply perform the follo
 - [x] Add React Router (Lazy Loading)
 - [x] Add 404 page
 - [x] Add Framer Motion
-- [ ] Add Styling
+- [x] Add Styling
   - [ ] Sass
   - [x] Tailwind
-- [ ] Add i18n
+- [x] Add i18n
   - [ ] Korean
-  - [ ] Japanese
+  - [x] Japanese
   - [ ] Chinese
 - [ ] Authentication
   - [ ] OAuth 2.0? OpenID Connect?
