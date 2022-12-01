@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export interface Props {
   title: string;
@@ -9,6 +10,8 @@ export interface Props {
 }
 
 function StackCard({ title, description, url, delay }: Props): JSX.Element {
+  const { t } = useTranslation();
+
   return (
     <motion.a
       initial={{
@@ -28,7 +31,7 @@ function StackCard({ title, description, url, delay }: Props): JSX.Element {
       <h4 className="font-bold text-lg">{title}</h4>
       <p className="my-3 text-gray-500 dark:text-gray-300">{description}</p>
       <button className="text-blue-400 dark:text-green-300 group-hover:underline hover:text-blue-300">
-        Documentation →
+        {t("documentation")} →
       </button>
     </motion.a>
   );

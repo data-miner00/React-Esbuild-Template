@@ -3,8 +3,11 @@ import { motion } from "framer-motion";
 
 import StackCard from "../components/StackCard";
 import techData from "../data/TechnologyData.json";
+import { useTranslation } from "react-i18next";
 
 function Home(): JSX.Element {
+  const { t } = useTranslation();
+
   return (
     <main className="">
       <header className="mt-4 mb-16">
@@ -23,7 +26,7 @@ function Home(): JSX.Element {
             type: "tween",
           }}
         >
-          The Ultimate Template
+          {t("template_title")}
         </motion.h1>
         <motion.p
           initial={{
@@ -42,7 +45,7 @@ function Home(): JSX.Element {
           }}
           className="text-center text-gray-500 dark:text-gray-300"
         >
-          Batteries included React template that supercharges your development.
+          {t("template_description")}
         </motion.p>
       </header>
 
@@ -52,7 +55,7 @@ function Home(): JSX.Element {
             key={index}
             delay={index}
             title={data.title}
-            description={data.description}
+            description={t(data.title)}
             url={data.url}
           />
         ))}

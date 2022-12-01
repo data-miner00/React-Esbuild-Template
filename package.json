@@ -7,7 +7,7 @@
     "watch": "node esbuild.config.js",
     "build": "esbuild src/index.tsx --bundle --minify --outfile=public/dist/bundle.js",
     "start": "lite-server",
-    "lint": "eslint src/**/*.tsx",
+    "lint": "eslint src/**/*.{ts,tsx}",
     "test": "jest",
     "watch:tw": "tailwindcss -i ./src/index.css -o ./public/dist/tailwind.css --watch",
     "build:tw": "tailwindcss -i ./src/index.css -o ./public/dist/tailwind.css --minify",
@@ -19,7 +19,10 @@
     "esbuild",
     "eslint",
     "jest",
-    "typescript"
+    "typescript",
+    "tailwindcss",
+    "framer-motion",
+    "github-workflows"
   ],
   "author": "shaun",
   "license": "MIT",
@@ -59,8 +62,10 @@
   },
   "dependencies": {
     "framer-motion": "^7.6.7",
+    "i18next": "^22.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-i18next": "^12.0.0",
     "react-router-dom": "^6.4.3"
   }
 }

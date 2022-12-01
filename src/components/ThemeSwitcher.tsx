@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function ThemeSwitcher(): JSX.Element {
-  const [theme, setTheme] = useState<string>(localStorage.theme);
+  const [theme, setTheme] = useState<string>(localStorage.theme ?? "light");
 
   function switchTheme(): void {
     if (theme === "light") {
@@ -16,7 +16,7 @@ function ThemeSwitcher(): JSX.Element {
   }
 
   return (
-    <button className="block ml-5" onClick={switchTheme}>
+    <button className="block ml-5 px-2" onClick={switchTheme}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="20"

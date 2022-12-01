@@ -4,12 +4,14 @@ import { MemoryRouter } from "react-router-dom";
 
 import Header from "../Header";
 
-it("renders the content properly", () => {
-  render(
-    <MemoryRouter>
-      <Header />
-    </MemoryRouter>
-  );
-  const helloElement = screen.getByText(/home/i);
-  expect(helloElement).toBeInTheDocument();
+describe("Header component", () => {
+  it("should renders the content properly", () => {
+    render(
+      <MemoryRouter>
+        <Header />
+      </MemoryRouter>
+    );
+    const helloElement = screen.getByText(/home/i);
+    expect(helloElement).toBeInTheDocument();
+  });
 });
