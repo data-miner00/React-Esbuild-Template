@@ -129,7 +129,7 @@ The list of tools that is used when development.
 
 ### Installation
 
-_To use this template for personal use or contribution, simply perform the following._ Do note that a total of **3 terminals** are required to get the entire application up and running for development.
+_To use this template for personal use or contribution, simply perform the following._ A total of **3 terminals** are required to get 3 of the core components of application up and running for development. However, it is possible to start all the necessary processes with one terminal by using `pnpm dev` as shown on step 7.
 
 1. Clone the repo
    ```sh
@@ -155,24 +155,28 @@ _To use this template for personal use or contribution, simply perform the follo
    ```sh
    pnpm format
    ```
-7. Start Esbuild (requires 1 terminal)
+7. Start Esbuild, Tailwind JIT and local dev server concurrently. Skip 8,9,10
+   ```sh
+   pnpm dev
+   ```
+8. Start Esbuild (requires 1 terminal)
    ```sh
    pnpm watch
    ```
-8. Start Tailwind JIT (requires 1 terminal)
+9. Start Tailwind JIT (requires 1 terminal)
    ```sh
    pnpm watch:tw
    ```
-9. Finally start local dev server (requires 1 terminal)
-   ```sh
-   pnpm start
-   ```
-10. Compile for production
+10. Finally start local dev server (requires 1 terminal)
+    ```sh
+    pnpm start
+    ```
+11. Compile for production
     ```sh
     pnpm build:tw
     pnpm build
     ```
-11. Purge dist folder
+12. Purge dist folder
     ```sh
     pnpm purge
     ```
