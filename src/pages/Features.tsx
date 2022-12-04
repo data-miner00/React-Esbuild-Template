@@ -1,7 +1,7 @@
 import React from "react";
 import { getVariable, Variable } from "../utils/getVariable";
 
-function Profile(): JSX.Element {
+function Features(): JSX.Element {
   return (
     <>
       <h1>
@@ -12,4 +12,4 @@ function Profile(): JSX.Element {
   );
 }
 
-export default Profile;
+export default Features;
