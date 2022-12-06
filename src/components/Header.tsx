@@ -18,8 +18,8 @@ function Header(): JSX.Element {
           <Link to="/" className="px-4 font-semibold">
             {t("home")}
           </Link>
-          <Link to="/profile" className="px-4 font-semibold">
-            {t("profile")}
+          <Link to="/features" className="px-4 font-semibold">
+            {t("features")}
           </Link>
           <Link to="/about" className="px-4 font-semibold">
             {t("about")}

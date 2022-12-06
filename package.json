@@ -12,7 +12,8 @@
     "watch:tw": "tailwindcss -i ./src/index.css -o ./public/dist/tailwind.css --watch",
     "build:tw": "tailwindcss -i ./src/index.css -o ./public/dist/tailwind.css --minify",
     "format": "prettier --write .",
-    "purge": "node scripts/purgeDist.js ./public/dist"
+    "purge": "node scripts/purgeDist.js ./public/dist",
+    "dev": "concurrently --kill-others \"pnpm watch\" \"pnpm watch:tw\" \"pnpm start\""
   },
   "keywords": [
     "react",
@@ -22,7 +23,8 @@
     "typescript",
     "tailwindcss",
     "framer-motion",
-    "github-workflows"
+    "github-workflows",
+    "i18next"
   ],
   "author": "shaun",
   "license": "MIT",
@@ -38,6 +40,7 @@
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.42.0",
     "autoprefixer": "^10.4.13",
+    "concurrently": "^7.6.0",
     "dotenv": "^16.0.3",
     "esbuild": "^0.15.12",
     "esbuild-plugin-inline-image": "^0.0.8",
