@@ -23,7 +23,8 @@
     "typescript",
     "tailwindcss",
     "framer-motion",
-    "github-workflows"
+    "github-workflows",
+    "i18next"
   ],
   "author": "shaun",
   "license": "MIT",
