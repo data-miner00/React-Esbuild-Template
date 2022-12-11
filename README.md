@@ -206,6 +206,8 @@ _To use this template for personal use or contribution, simply perform the follo
 - [x] Dark mode
 - [x] Add GitHub workflows
 - [ ] Add PWA Manifest
+- [ ] Mobile Responsive
+  - [ ] Navbar and header
 
 See the [open issues](https://github.com/data-miner00/React-Esbuild-Template/issues) for a full list of proposed features (and known issues).
 
