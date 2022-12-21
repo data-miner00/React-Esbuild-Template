@@ -4,8 +4,9 @@
   "description": "Opinionated React Template powered by ESBuild.",
   "main": "src/index.tsx",
   "scripts": {
-    "watch": "node esbuild.config.js",
-    "build": "esbuild src/index.tsx --bundle --minify --outfile=public/dist/bundle.js",
+    "build": "pnpm build:esb && pnpm build:tw",
+    "watch:esb": "node esbuild.config.js",
+    "build:esb": "esbuild src/index.tsx --bundle --minify --outfile=public/dist/bundle.js",
     "start": "lite-server",
     "lint": "eslint src/**/*.{ts,tsx}",
     "test": "jest",
@@ -13,7 +14,7 @@
     "build:tw": "tailwindcss -i ./src/index.css -o ./public/dist/tailwind.css --minify",
     "format": "prettier --write .",
     "purge": "node scripts/purgeDist.js ./public/dist",
-    "dev": "concurrently --kill-others \"pnpm watch\" \"pnpm watch:tw\" \"pnpm start\""
+    "dev": "concurrently --kill-others \"pnpm watch:esb\" \"pnpm watch:tw\" \"pnpm start\""
   },
   "keywords": [
     "react",
