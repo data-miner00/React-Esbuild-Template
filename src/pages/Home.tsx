@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+import ethers = require("ethers");
 
 import StackCard from "../components/StackCard";
 import techData from "../data/TechnologyData.json";
@@ -8,8 +9,16 @@ import { useTranslation } from "react-i18next";
 function Home(): JSX.Element {
   const { t } = useTranslation();
 
+  async function connectToWallet(): Promise<ethers.providers.JsonRpcSigner> {
+    const provider = new ethers.providers.Web3Provider(
+      (window as any).ethereum
+    );
+    await provider.send("eth_requestAccounts", []);
+    return provider.getSigner();
+  }
+
   return (
-    <main className="">
+    <main className="" onClick={connectToWallet}>
       <header className="mt-4 mb-16">
         <motion.h1
           className="my-awesome-h1"
