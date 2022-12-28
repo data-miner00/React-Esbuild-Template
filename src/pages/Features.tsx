@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 import featuresData from "../data/Features.json";
@@ -14,12 +15,22 @@ function Features(): JSX.Element {
 
       <ul className="flex flex-col gap-2">
         {featuresData.map((feature, index) => (
-          <li
+          <motion.li
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            transition={{
+              duration: 0.5,
+              delay: index * 0.2,
+            }}
             key={index}
             className="border dark:border-gray-600 border-gray-200 border-solid p-3"
           >
             ✨ {t(feature)}
-          </li>
+          </motion.li>
         ))}
       </ul>
     </div>
