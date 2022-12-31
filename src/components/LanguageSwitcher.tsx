@@ -12,8 +12,12 @@ function LanguageSwitcher(): JSX.Element {
   }
 
   return (
-    <div className="relative flex items-center">
+    <div
+      data-testid="language-switcher-container"
+      className="relative flex items-center"
+    >
       <button
+        data-testid="language-switcher"
         className="flex items-center justify-between px-2"
         onClick={() => setPopoverOpen((state) => !state)}
       >
@@ -45,15 +49,20 @@ function LanguageSwitcher(): JSX.Element {
         </svg>
       </button>
       {popoverOpen && (
-        <div className="before:content=[''] before:h-2 before:w-2 before:rotate-45 before:bg-gray-200 dark:before:bg-gray-600 before:absolute before:left-1/2 before:-translate-x-1/2 before:top-[37px]">
+        <div
+          data-testid="language-popover"
+          className="before:h-2 before:w-2 before:rotate-45 before:bg-gray-200 dark:before:bg-gray-600 before:absolute before:left-1/2 before:-translate-x-1/2 before:top-[37px]"
+        >
           <div className="absolute w-24 -bottom-28 -left-5 z-20 flex flex-col rounded shadow-md overflow-hidden">
             <button
+              data-testid="language-btn-en"
               className="px-2 py-3 block bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors duration-200 ease-in"
               onClick={() => handleLanguageSwitch("en")}
             >
               English
             </button>
             <button
+              data-testid="language-btn-ja"
               className="px-2 py-3 block bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors duration-200 ease-in"
               onClick={() => handleLanguageSwitch("ja")}
             >

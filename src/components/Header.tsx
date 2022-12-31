@@ -9,12 +9,15 @@ function Header(): JSX.Element {
   const { t } = useTranslation();
 
   return (
-    <header className="">
+    <header data-testid="header">
       <div className="max-w-[1400px] mx-auto md:px-8 items-center flex justify-between h-24">
-        <div className="font-bold uppercase text-2xl text tracking-wide">
+        <div
+          data-testid="header-logo"
+          className="font-bold uppercase text-2xl text tracking-wide"
+        >
           React + Esbuild
         </div>
-        <nav className="flex">
+        <nav data-testid="header-nav" className="flex">
           <Link to="/" className="px-4 font-semibold">
             {t("home")}
           </Link>
