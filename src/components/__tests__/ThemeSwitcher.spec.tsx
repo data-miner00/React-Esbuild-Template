@@ -1,10 +1,30 @@
-import React from "react";
-import { render } from "@testing-library/react";
-
-import ThemeSwitcher from "../ThemeSwitcher";
+import ThemeSwitcherSteps from "./ThemeSwitcher.steps";
 
 describe("ThemeSwitcher component", () => {
+  let steps: ThemeSwitcherSteps;
+  const themeButtonTestId = "theme-switcher";
+  const moonIconTestId = "theme-moon";
+  const sunIconTestId = "theme-sun";
+
+  beforeEach(() => {
+    steps = new ThemeSwitcherSteps();
+  });
+
   it("should renders correctly", () => {
-    render(<ThemeSwitcher />);
+    steps
+      .whenIRenderComponent()
+      .thenIExpectElementToExist(themeButtonTestId)
+      .thenIExpectElementToExist(moonIconTestId)
+      .thenIExpectElementToNotExist(sunIconTestId);
+  });
+
+  it("should change theme when clicked", () => {
+    steps
+      .whenIRenderComponent()
+      .thenIExpectElementToExist(moonIconTestId)
+      .thenIExpectElementToNotExist(sunIconTestId)
+      .whenIClickOnElement(themeButtonTestId)
+      .thenIExpectElementToExist(sunIconTestId)
+      .thenIExpectElementToNotExist(moonIconTestId);
   });
 });
