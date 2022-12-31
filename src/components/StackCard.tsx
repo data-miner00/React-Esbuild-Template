@@ -1,29 +1,17 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 export interface Props {
   title: string;
   description: string;
   url: string;
-  delay: number;
 }
 
-function StackCard({ title, description, url, delay }: Props): JSX.Element {
+function StackCard({ title, description, url }: Props): JSX.Element {
   const { t } = useTranslation();
 
   return (
-    <motion.a
-      initial={{
-        opacity: 0,
-      }}
-      animate={{
-        opacity: 1,
-      }}
-      transition={{
-        duration: 0.5,
-        delay: delay * 0.2,
-      }}
+    <a
       href={url}
       target="_blank"
       data-testid="stackcard"
@@ -41,7 +29,7 @@ function StackCard({ title, description, url, delay }: Props): JSX.Element {
       <button className="text-blue-400 dark:text-green-300 group-hover:underline hover:text-blue-300">
         {t("documentation")} →
       </button>
-    </motion.a>
+    </a>
   );
 }
 
