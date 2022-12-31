@@ -1,6 +1,6 @@
 import { screen, fireEvent } from "@testing-library/react";
 
-abstract class BaseSteps<TStep, TProps = undefined> {
+abstract class BaseSteps<TStep, TProps = {}> {
     protected props: TProps;
 
     public givenIHaveTheFollowingProps(props: TProps): TStep {
