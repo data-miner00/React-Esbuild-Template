@@ -15,6 +15,7 @@ function StackCard({ title, description, url }: Props): JSX.Element {
       href={url}
       target="_blank"
       data-testid="stackcard"
+      rel="noreferrer"
       className="block p-6 w-80 group group-hover:shadow-md border border-solid border-gray-300 hover:border-gray-400 dark:border-gray-500 rounded dark:hover:border-gray-400"
     >
       <h4 data-testid="stackcard-title" className="font-bold text-lg">

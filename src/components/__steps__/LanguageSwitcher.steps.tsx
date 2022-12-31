@@ -11,6 +11,7 @@ class LanguageSwitcherSteps extends BaseSteps<LanguageSwitcherSteps> {
         this.instance = render(<LanguageSwitcher />);
         return this;
     }
+
     public getSteps(): LanguageSwitcherSteps {
         return this;
     }

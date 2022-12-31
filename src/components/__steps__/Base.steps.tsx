@@ -39,13 +39,13 @@ abstract class BaseSteps<TStep, TProps = undefined> {
         return this.getSteps();
     }
 
-    public thenIExpectElementToHaveAttributeWithValue(
+    public thenIExpectElementToHaveAttributeWithValue<T = string>(
         testid: string,
         attribute: string,
-        value?: any
+        value?: T
     ): TStep {
         const element = screen.getByTestId(testid);
-        if (!value) {
+        if (value != null) {
             expect(element).toHaveAttribute(attribute);
         } else {
             expect(element).toHaveAttribute(attribute, value);

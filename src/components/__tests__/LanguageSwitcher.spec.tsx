@@ -5,8 +5,8 @@ describe("LanguageSwitcher component", () => {
   const languageSwitcherContainerTestId = "language-switcher-container";
   const languageSwitcherButtonTestId = "language-switcher";
   const languageMenuTestId = "language-popover";
-  const languageEnglishButtonTestId = "language-btn-en";
-  const languageJapaneseButtonTestId = "language-btn-ja";
+  const languageEnglishButtonTestId = "language-btn-en"; // eslint-disable-line
+  const languageJapaneseButtonTestId = "language-btn-ja"; // eslint-disable-line
 
   beforeEach(() => {
     steps = new LanguageSwitcherSteps();
