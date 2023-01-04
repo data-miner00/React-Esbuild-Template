@@ -41,7 +41,7 @@ function Home(): JSX.Element {
         animate="show"
         className="mx-auto w-2/3 flex flex-wrap gap-7 justify-center items-center"
       >
-        {techData.map((data, index) => (
+        {techData.slice(0, 9).map((data, index) => (
           <motion.div variants={stackCardItemMotion} key={index}>
             <StackCard
               title={data.title}
