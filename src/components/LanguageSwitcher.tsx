@@ -56,14 +56,14 @@ function LanguageSwitcher(): JSX.Element {
           <div className="absolute w-24 -bottom-28 -left-5 z-20 flex flex-col rounded shadow-md overflow-hidden">
             <button
               data-testid="language-btn-en"
-              className="px-2 py-3 block bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors duration-200 ease-in"
+              className="px-2 py-3 block bg-gray-200 dark:bg-gray-600 hover:bg-gray-200 dark:hover:bg-gray-500"
               onClick={() => handleLanguageSwitch("en")}
             >
               English
             </button>
             <button
               data-testid="language-btn-ja"
-              className="px-2 py-3 block bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors duration-200 ease-in"
+              className="px-2 py-3 block bg-gray-200 dark:bg-gray-600 hover:bg-gray-200 dark:hover:bg-gray-500"
               onClick={() => handleLanguageSwitch("ja")}
             >
               日本語

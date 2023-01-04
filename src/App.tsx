@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 
 import Header from "./components/Header";
 import Loading from "./components/Loading";
+import ReferencePane from "./components/ReferencePane";
 import "./App.css";
 
 const Home = lazy(async () => await import("./pages/Home"));
@@ -13,6 +14,7 @@ const NotFound = lazy(async () => await import("./pages/NotFound"));
 const App = (): JSX.Element => (
   <div>
     <Header />
+    <ReferencePane />
     <React.Suspense fallback={<Loading />}>
       <Routes>
         <Route path="/" element={<Home />} />
