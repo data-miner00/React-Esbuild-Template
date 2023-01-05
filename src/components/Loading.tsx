@@ -1,5 +1,3 @@
-import React from "react";
-
 function Loading(): JSX.Element {
   return (
     <div className="absolute top-[50%] left-[50%] transform -translate-y-[50%] -translate-x-[50%]">

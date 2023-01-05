@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 function ThemeSwitcher(): JSX.Element {
   const [theme, setTheme] = useState<string>(localStorage.theme ?? "light");
