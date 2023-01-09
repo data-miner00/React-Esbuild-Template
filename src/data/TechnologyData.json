@@ -34,5 +34,13 @@
   {
     "title": "i18next",
     "url": "https://react.i18next.com/"
+  },
+  {
+    "title": "React Icons",
+    "url": "https://react-icons.github.io/react-icons/"
+  },
+  {
+    "title": "Zod",
+    "url": "https://zod.dev/"
   }
 ]

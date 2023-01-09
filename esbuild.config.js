@@ -32,6 +32,7 @@ esbuild
       ".jpg": "file",
     },
     define,
+    jsx: "automatic",
     watch: {
       onRebuild(error, result) {
         var now = new Date();

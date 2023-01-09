@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 function LanguageSwitcher(): JSX.Element {
@@ -12,8 +12,12 @@ function LanguageSwitcher(): JSX.Element {
   }
 
   return (
-    <div className="relative flex items-center">
+    <div
+      data-testid="language-switcher-container"
+      className="relative flex items-center"
+    >
       <button
+        data-testid="language-switcher"
         className="flex items-center justify-between px-2"
         onClick={() => setPopoverOpen((state) => !state)}
       >
@@ -37,7 +41,7 @@ function LanguageSwitcher(): JSX.Element {
           strokeWidth="2"
           viewBox="0 0 24 24"
           stroke="currentColor"
-          className="h-4 w-4 block"
+          className={`h-4 w-4 block ${popoverOpen ? "text-green-300" : ""}`}
         >
           <g transform="rotate(90 12 12)">
             <path d="M9 5l7 7-7 7"></path>
@@ -45,19 +49,26 @@ function LanguageSwitcher(): JSX.Element {
         </svg>
       </button>
       {popoverOpen && (
-        <div className="absolute w-24 -bottom-28 -left-5 z-20 flex flex-col bg-gray-200/50 dark:bg-gray-600/50 rounded shadow-md">
-          <button
-            className="px-2 py-3 block"
-            onClick={() => handleLanguageSwitch("en")}
-          >
-            English
-          </button>
-          <button
-            className="px-2 py-3 block"
-            onClick={() => handleLanguageSwitch("ja")}
-          >
-            日本語
-          </button>
+        <div
+          data-testid="language-popover"
+          className="before:h-2 before:w-2 before:rotate-45 before:bg-gray-200 dark:before:bg-gray-600 before:absolute before:left-1/2 before:-translate-x-1/2 before:top-[37px]"
+        >
+          <div className="absolute w-24 -bottom-28 -left-5 z-20 flex flex-col rounded shadow-md overflow-hidden">
+            <button
+              data-testid="language-btn-en"
+              className="px-2 py-3 block bg-gray-200 dark:bg-gray-600 hover:bg-gray-200 dark:hover:bg-gray-500"
+              onClick={() => handleLanguageSwitch("en")}
+            >
+              English
+            </button>
+            <button
+              data-testid="language-btn-ja"
+              className="px-2 py-3 block bg-gray-200 dark:bg-gray-600 hover:bg-gray-200 dark:hover:bg-gray-500"
+              onClick={() => handleLanguageSwitch("ja")}
+            >
+              日本語
+            </button>
+          </div>
         </div>
       )}
     </div>
