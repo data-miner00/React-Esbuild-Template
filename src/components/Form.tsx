@@ -45,7 +45,7 @@ function Form(): JSX.Element {
   return (
     <form
       onSubmit={submit}
-      className="border rounded border-solid border-gray-300 p-10 w-96 mx-auto"
+      className="border rounded border-solid border-gray-300 dark:border-gray-500 p-10 w-96 mx-auto"
     >
       <h1 className="text-lg text-center font-bold">Simple Form Element</h1>
       <p className=" text-center mb-7 font-semibold">
@@ -57,7 +57,7 @@ function Form(): JSX.Element {
       </label>
       <input
         name="name"
-        className="block bg-gray-200 px-5 py-2 rounded-lg w-full mb-2"
+        className="block bg-gray-200 dark:bg-gray-600 outline-none focus:border-gray-400 border-solid border border-transparent px-5 py-2 rounded-lg w-full mb-2"
         type="text"
         placeholder="Name"
         ref={nameRef}
@@ -68,7 +68,7 @@ function Form(): JSX.Element {
       </label>
       <input
         name="email"
-        className="block bg-gray-200 px-5 py-2 rounded-lg w-full mb-2"
+        className="block bg-gray-200 dark:bg-gray-600 outline-none focus:border-gray-400 border-solid border border-transparent px-5 py-2 rounded-lg w-full mb-2"
         type="text"
         placeholder="Email"
         ref={emailRef}
@@ -79,7 +79,7 @@ function Form(): JSX.Element {
       </label>
       <input
         name="age"
-        className="block bg-gray-200 px-5 py-2 rounded-lg w-full mb-2"
+        className="block bg-gray-200 dark:bg-gray-600 outline-none focus:border-gray-400 border-solid border border-transparent px-5 py-2 rounded-lg w-full mb-2"
         type="number"
         placeholder="Age"
         ref={ageRef}
