@@ -25,7 +25,10 @@
     "tailwindcss",
     "framer-motion",
     "github-workflows",
-    "i18next"
+    "i18next",
+    "prettier",
+    "zod",
+    "react-icons"
   ],
   "author": "shaun",
   "license": "MIT",

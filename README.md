@@ -88,6 +88,10 @@ The technologies and tools used within this template.
 - TailwindCSS
 - Framer Motion
 - GitHub Workflow
+- i18next
+- Prettier
+- Zod
+- react-icons
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -202,12 +206,13 @@ _To use this template for personal use or contribution, simply perform the follo
   - [ ] Chinese
 - [ ] Authentication
   - [ ] OAuth 2.0? OpenID Connect?
-- [ ] Prisma
+- ~[ ] Prisma~
 - [x] Dark mode
 - [x] Add GitHub workflows
 - [ ] Add PWA Manifest
 - [ ] Mobile Responsive
   - [ ] Navbar and header
+- [ ] Add E2E tests
 
 See the [open issues](https://github.com/data-miner00/React-Esbuild-Template/issues) for a full list of proposed features (and known issues).
 
