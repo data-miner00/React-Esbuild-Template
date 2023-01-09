@@ -6,11 +6,11 @@ import { snackbarMotion } from "../motions/snackbarMotion";
 
 export type SnackbarType = "info" | "warn" | "error" | "success" | "unset";
 
-type Props = {
+interface Props {
   message: string;
   type: SnackbarType;
   show: boolean;
-};
+}
 
 function getTailwindClasses(type: SnackbarType): string {
   switch (type) {

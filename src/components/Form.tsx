@@ -30,15 +30,15 @@ function Form(): JSX.Element {
     if (!results.success) {
       console.log(results.error.format());
 
-      if (ageErrorRef.current)
+      if (ageErrorRef.current != null)
         ageErrorRef.current.innerText =
           results.error.format().age?._errors.join(" ") ?? "";
 
-      if (emailErrorRef.current)
+      if (emailErrorRef.current != null)
         emailErrorRef.current.innerText =
           results.error.format().email?._errors.join(" ") ?? "";
 
-      if (nameErrorRef.current)
+      if (nameErrorRef.current != null)
         nameErrorRef.current.innerText =
           results.error.format().name?._errors.join(" ") ?? "";
     }

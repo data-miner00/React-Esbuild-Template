@@ -12,7 +12,7 @@ function ReferencePane(): JSX.Element {
   const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  function togglePane() {
+  function togglePane(): void {
     if (loading) return;
     setLoading(true);
     if (open) {
