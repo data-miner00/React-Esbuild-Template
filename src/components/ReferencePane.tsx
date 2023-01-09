@@ -8,8 +8,8 @@ import { referencePaneMotion } from "../motions/referencePaneMotion";
 
 function ReferencePane(): JSX.Element {
   const { t } = useTranslation();
-  const [open, setOpen] = useState(true);
-  const [show, setShow] = useState(true);
+  const [open, setOpen] = useState(false);
+  const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(false);
 
   function togglePane() {
@@ -34,10 +34,10 @@ function ReferencePane(): JSX.Element {
     <>
       {open && (
         <motion.aside
+          data-testid="pane"
           initial={false}
           animate={show ? "open" : "closed"}
           className={`w-96 fixed top-0 left-0 bg-gray-700 h-screen overflow-y-auto`}
-          onClick={togglePane}
         >
           <motion.div
             variants={referencePaneMotion}
@@ -48,7 +48,7 @@ function ReferencePane(): JSX.Element {
             </header>
             <div>
               <div
-                className="flex flex-col gap-4 items-center overflow-y-scroll"
+                className="flex flex-col gap-4 items-center overflow-y-scroll  pb-5"
                 style={{ height: "calc(100vh - 92px)" }}
               >
                 {techData.map((data, index) => (
@@ -66,7 +66,8 @@ function ReferencePane(): JSX.Element {
       )}
 
       <button
-        className="h-7 w-7 rounded-full bg-gradient-to-br from-[#e0c3fc] to-[#8ec5fc] fixed left-12 top-12"
+        data-testid="pane-switch"
+        className="h-7 w-7 rounded-full bg-gradient-to-br from-[#e0c3fc] to-[#8ec5fc] fixed left-8 top-8"
         onClick={togglePane}
       ></button>
     </>
