@@ -1,4 +1,5 @@
 import { FormEvent, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { z } from "zod";
 
 const FormSchema = z.object({
@@ -8,6 +9,7 @@ const FormSchema = z.object({
 });
 
 function Form(): JSX.Element {
+  const { t } = useTranslation();
   const nameRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
   const ageRef = useRef<HTMLInputElement>(null);
@@ -47,41 +49,45 @@ function Form(): JSX.Element {
       onSubmit={submit}
       className="border rounded border-solid border-gray-300 dark:border-gray-500 p-10 w-96 mx-auto"
     >
-      <h1 className="text-lg text-center font-bold">Simple Form Element</h1>
-      <p className=" text-center mb-7 font-semibold">
-        This form component is capable to perform data validation with Zod
+      <h1 className="text-lg text-center font-bold">
+        {t("Simple Form Element")}
+      </h1>
+      <p className="text-center mb-7 font-semibold">
+        {t(
+          "This form component is capable to perform data validation with Zod"
+        )}
       </p>
 
       <label htmlFor="name" className="mb-2 block">
-        Full Name
+        {t("Name")}
       </label>
       <input
         name="name"
         className="block bg-gray-200 dark:bg-gray-600 outline-none focus:border-gray-400 border-solid border border-transparent px-5 py-2 rounded-lg w-full mb-2"
         type="text"
-        placeholder="Name"
+        placeholder={t("Name") ?? "Name"}
         ref={nameRef}
       />
       <p className="text-red-500 italic text-sm my-2" ref={nameErrorRef}></p>
       <label htmlFor="email" className="mb-2 block">
-        Email
+        {t("Email")}
       </label>
       <input
         name="email"
         className="block bg-gray-200 dark:bg-gray-600 outline-none focus:border-gray-400 border-solid border border-transparent px-5 py-2 rounded-lg w-full mb-2"
         type="text"
-        placeholder="Email"
+        placeholder={t("Email") ?? "Email"}
         ref={emailRef}
       />
       <p className="text-red-500 italic text-sm my-2" ref={emailErrorRef}></p>
       <label htmlFor="age" className="mb-2 block">
-        Age
+        {t("Age")}
       </label>
       <input
         name="age"
         className="block bg-gray-200 dark:bg-gray-600 outline-none focus:border-gray-400 border-solid border border-transparent px-5 py-2 rounded-lg w-full mb-2"
         type="number"
-        placeholder="Age"
+        placeholder={t("Age") ?? "Age"}
         ref={ageRef}
       />
       <p className="text-red-500 italic text-sm my-2" ref={ageErrorRef}></p>
@@ -89,7 +95,7 @@ function Form(): JSX.Element {
         type="submit"
         className="mt-7 px-5 py-2 text-center block bg-blue-400 text-white rounded-xl w-full"
       >
-        Submit
+        {t("Submit")}
       </button>
     </form>
   );
