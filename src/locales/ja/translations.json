@@ -14,6 +14,8 @@
   "TypeScript": "JavaScriptを拡張して作られたプログラミング言語",
   "Framer Motion": "React対して強いアニメーションライブラリ",
   "i18next": "完璧すぎなJavaScript国際化フレームワーク",
+  "React Icons": "一般的なソースからの React 用の豊富なアイコン ライブラリ",
+  "Zod": "静的型推論による TypeScript ファーストのスキーマ検証",
   "Latest React 18": "最新バージョンのReact",
   "Latest Tailwind v3": "最新バージョンのTailwind",
   "Jest with @testing-library/react configured": "Jestと@testing-library/react設定済み",
@@ -27,5 +29,11 @@
   "Environment variables & helpers": "環境変数とヘルパー",
   "Pnpm package manager": "Pnpmパッケージマネージャー",
   "GitHub workflows": "GitHubワークフロー",
-  "Detailed list of features that are baked into this template": "このテンプレートに組み込まれている機能の詳細なリスト"
+  "Detailed list of features that are baked into this template": "このテンプレートに組み込まれている機能の詳細なリスト",
+  "Simple Form Element": "シンプルなフォーム要素",
+  "This form component is capable to perform data validation with Zod": "このフォーム コンポーネントは、Zod でデータ検証を実行できます。",
+  "Submit": "送信",
+  "Age": "年齢",
+  "Email": "メール",
+  "Name": "名前"
 }

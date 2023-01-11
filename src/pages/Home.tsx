@@ -1,9 +1,14 @@
-import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 import StackCard from "../components/StackCard";
 import techData from "../data/TechnologyData.json";
-import { useTranslation } from "react-i18next";
+import {
+  headingMotion,
+  paragraphMotion,
+  stackCardContainerMotion,
+  stackCardItemMotion,
+} from "../motions/homePageMotion";
 
 function Home(): JSX.Element {
   const { t } = useTranslation();
@@ -13,53 +18,38 @@ function Home(): JSX.Element {
       <header className="mt-4 mb-16">
         <motion.h1
           className="my-awesome-h1"
-          initial={{
-            opacity: 0,
-            y: "100%",
-          }}
-          animate={{
-            animationDuration: "500ms",
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            type: "tween",
-          }}
+          variants={headingMotion}
+          initial="hidden"
+          animate="show"
         >
           {t("template_title")}
         </motion.h1>
         <motion.p
-          initial={{
-            opacity: 0,
-            y: "100%",
-          }}
-          animate={{
-            animationDuration: "500ms",
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            ease: "easeOut",
-            delay: 0.3,
-            type: "tween",
-          }}
+          variants={paragraphMotion}
+          initial="hidden"
+          animate="show"
           className="text-center text-gray-500 dark:text-gray-300"
         >
           {t("template_description")}
         </motion.p>
       </header>
 
-      <div className="mx-auto w-2/3 flex flex-wrap gap-7 justify-center items-center">
-        {techData.map((data, index) => (
-          <StackCard
-            key={index}
-            delay={index}
-            title={data.title}
-            description={t(data.title)}
-            url={data.url}
-          />
+      <motion.div
+        variants={stackCardContainerMotion}
+        initial="hidden"
+        animate="show"
+        className="mx-auto w-2/3 flex flex-wrap gap-7 justify-center items-center"
+      >
+        {techData.slice(0, 9).map((data, index) => (
+          <motion.div variants={stackCardItemMotion} key={index}>
+            <StackCard
+              title={data.title}
+              description={t(data.title)}
+              url={data.url}
+            />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </main>
   );
 }

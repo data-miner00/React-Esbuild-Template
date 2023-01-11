@@ -1,8 +1,13 @@
 import React from "react";
+import Form from "../components/Form";
 
 class About extends React.Component {
   public render(): JSX.Element {
-    return <h1>About</h1>;
+    return (
+      <div className="max-w-[1400px] mx-auto md:px-8">
+        <Form />
+      </div>
+    );
   }
 }
 
