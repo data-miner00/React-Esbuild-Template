@@ -14,7 +14,9 @@
     "build:tw": "tailwindcss -i ./src/index.css -o ./public/dist/tailwind.css --minify",
     "format": "prettier --write .",
     "purge": "node scripts/purgeDist.js ./public/dist",
-    "dev": "concurrently --kill-others \"pnpm watch:esb\" \"pnpm watch:tw\" \"pnpm start\""
+    "dev": "concurrently --kill-others \"pnpm watch:esb\" \"pnpm watch:tw\" \"pnpm start\"",
+    "test:e2e": "playwright test",
+    "report:e2e": "playwright show-report"
   },
   "keywords": [
     "react",
@@ -28,11 +30,13 @@
     "i18next",
     "prettier",
     "zod",
-    "react-icons"
+    "react-icons",
+    "playwright"
   ],
   "author": "shaun",
   "license": "MIT",
   "devDependencies": {
+    "@playwright/test": "^1.29.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@types/jest": "^29.2.5",
