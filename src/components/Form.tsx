@@ -22,7 +22,7 @@ function Form(): JSX.Element {
     const formData = {
       name: nameRef.current?.value,
       email: emailRef.current?.value,
-      age: emailRef.current?.value,
+      age: ageRef.current?.valueAsNumber,
     };
 
     const results = FormSchema.safeParse(formData);
