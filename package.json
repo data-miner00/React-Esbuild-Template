@@ -6,7 +6,7 @@
   "scripts": {
     "build": "pnpm build:esb && pnpm build:tw",
     "watch:esb": "node esbuild.config.js",
-    "build:esb": "esbuild src/index.tsx --bundle --minify --outfile=public/dist/bundle.js",
+    "build:esb": "esbuild src/index.tsx --bundle --minify --outfile=public/dist/bundle.js --loader:.png=file --loader:.svg=file --loader:.jpg=file --public-path=dist",
     "start": "lite-server",
     "lint": "eslint src/**/*.{ts,tsx}",
     "test": "jest",
