@@ -1,75 +1,61 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
 
 import StackCard from "./StackCard";
 import techData from "../data/TechnologyData.json";
-import { referencePaneMotion } from "../motions/referencePaneMotion";
 
 function ReferencePane(): JSX.Element {
   const { t } = useTranslation();
-  const [open, setOpen] = useState(false);
-  const [show, setShow] = useState(false);
-  const [loading, setLoading] = useState(false);
-
-  function togglePane(): void {
-    if (loading) return;
-    setLoading(true);
-    if (open) {
-      setShow((previous) => !previous);
-      setTimeout(() => {
-        setOpen((previous) => !previous);
-        setLoading(false);
-      }, 1500);
-    } else {
-      setOpen((previous) => !previous);
-      setTimeout(() => {
-        setShow((previous) => !previous);
-        setLoading(false);
-      }, 500);
-    }
-  }
+  const [open, setOpen] = useState(!false);
 
   return (
     <>
       {open && (
-        <motion.aside
+        <aside
           data-testid="pane"
-          initial={false}
-          animate={show ? "open" : "closed"}
-          className={`w-96 fixed top-0 left-0 bg-gray-700 h-screen overflow-y-auto`}
+          className="w-96 fixed top-0 left-0 bg-gray-100 dark:bg-gray-700 h-screen overflow-y-auto border-gray-200 dark:border-gray-600 border-r border-solid"
         >
-          <motion.div
-            variants={referencePaneMotion}
-            className="relative h-full"
-          >
-            <header className="text-center text-lg font-semibold w-full py-8">
-              Development Reference
-            </header>
-            <div>
-              <div
-                className="flex flex-col gap-4 items-center overflow-y-scroll  pb-5"
-                style={{ height: "calc(100vh - 92px)" }}
-              >
-                {techData.map((data, index) => (
-                  <StackCard
-                    key={index}
-                    title={data.title}
-                    description={t(data.title)}
-                    url={data.url}
-                  />
-                ))}
-              </div>
-            </div>
-          </motion.div>
-        </motion.aside>
+          <header className="border-b border-solid border-gray-200 dark:border-gray-600 flex">
+            <div className="border-r border-solid border-gray-200 dark:border-gray-600 w-16"></div>
+            <div className="p-5">✨ Reference Panel</div>
+          </header>
+          <main>
+            <section className="p-5 border-b border-solid border-gray-200 dark:border-gray-600 bg-gray-300/50 dark:bg-gray-800/50">
+              <p>
+                This component serves as a quicklinks to the devtools used
+                within the template. Feel free to delete this component if you
+                don't need it or after your development.
+              </p>
+            </section>
+            <nav className="flex my-5">
+              <button className="block px-5 border-r border-solid border-gray-600">
+                Docs Links
+              </button>
+              <button className="block px-5">Template Features</button>
+            </nav>
+          </main>
+        </aside>
       )}
 
       <button
         data-testid="pane-switch"
-        className="h-7 w-7 rounded-full bg-gradient-to-br from-[#e0c3fc] to-[#8ec5fc] fixed left-8 top-8"
-        onClick={togglePane}
-      ></button>
+        className="h-10 w-10 rounded-full flex place-items-center fixed left-5 top-4"
+        onClick={() => setOpen((open) => !open)}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="currentColor"
+          className="block"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fillRule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+          />
+        </svg>
+      </button>
     </>
   );
 }
