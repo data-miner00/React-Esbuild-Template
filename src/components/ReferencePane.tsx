@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { RxHamburgerMenu } from "react-icons/rx";
 
-import StackCard from "./StackCard";
 import techData from "../data/TechnologyData.json";
 
 function ReferencePane(): JSX.Element {
@@ -17,7 +17,7 @@ function ReferencePane(): JSX.Element {
         >
           <header className="border-b border-solid border-gray-200 dark:border-gray-600 flex">
             <div className="border-r border-solid border-gray-200 dark:border-gray-600 w-16"></div>
-            <div className="p-5">✨ Reference Panel</div>
+            <div className="p-5">Reference Panel</div>
           </header>
           <main>
             <section className="p-5 border-b border-solid border-gray-200 dark:border-gray-600 bg-gray-300/50 dark:bg-gray-800/50">
@@ -39,22 +39,10 @@ function ReferencePane(): JSX.Element {
 
       <button
         data-testid="pane-switch"
-        className="h-10 w-10 rounded-full flex place-items-center fixed left-5 top-4"
+        className="h-10 w-10 rounded-full flex place-items-center fixed left-5 top-3"
         onClick={() => setOpen((open) => !open)}
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          fill="currentColor"
-          className="block"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fillRule="evenodd"
-            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-          />
-        </svg>
+        <RxHamburgerMenu className="block" size="24px" />
       </button>
     </>
   );
