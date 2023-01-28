@@ -19,9 +19,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Install Playwright Browsers
-        run: pnpm dlx playwright@1.29.2 install --with-deps
+        run: playwright install --with-deps
       - name: Run Playwright tests
-        run: pnpm dlx playwright test
+        run: playwright test
         env:
           PLAYWRIGHT_TEST_BASE_URL: ${{ github.event.deployment_status.target_url }}
       - uses: actions/upload-artifact@v3
