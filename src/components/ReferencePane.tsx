@@ -9,7 +9,7 @@ function ReferencePane(): JSX.Element {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
 
-  const DocsLinksContent = () => (
+  const DocsLinksContent = (): JSX.Element => (
     <div>
       <ol className="flex flex-wrap px-5 gap-5">
         {techData.map((data, index) => (
@@ -33,7 +33,7 @@ function ReferencePane(): JSX.Element {
     </div>
   );
 
-  const TemplateFeaturesContent = () => <div>To be added.</div>;
+  const TemplateFeaturesContent = (): JSX.Element => <div>To be added.</div>;
 
   return (
     <>

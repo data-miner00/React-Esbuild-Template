@@ -1,17 +1,17 @@
 import { Component } from "react";
 
-export type TabProps = {
+export interface TabProps {
   title: string;
   content: React.ReactNode;
-};
+}
 
-export type Props = {
+export interface Props {
   tabs: TabProps[];
-};
+}
 
-type States = {
+interface States {
   activeTab: number;
-};
+}
 
 class Tabs extends Component<Props, States> {
   constructor(props: Props) {
@@ -22,11 +22,11 @@ class Tabs extends Component<Props, States> {
     };
   }
 
-  onClickTabItem(tabIndex: number) {
+  onClickTabItem(tabIndex: number): void {
     this.setState({ activeTab: tabIndex });
   }
 
-  render() {
+  render(): JSX.Element {
     const {
       props: { tabs },
       state: { activeTab },

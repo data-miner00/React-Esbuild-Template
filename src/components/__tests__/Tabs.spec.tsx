@@ -4,11 +4,11 @@ import { Props, TabProps } from "../Tabs";
 describe("Tabs component", () => {
   let steps: TabsSteps;
 
-  const FirstTabContent = () => (
+  const FirstTabContent = (): JSX.Element => (
     <div data-testid="first-tab-content">This is first tab</div>
   );
 
-  const SecondTabContent = () => (
+  const SecondTabContent = (): JSX.Element => (
     <div data-testid="second-tab-content">This is second tab</div>
   );
 
