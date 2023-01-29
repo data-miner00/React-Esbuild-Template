@@ -7,13 +7,13 @@ import Tabs from "./Tabs";
 
 function ReferencePane(): JSX.Element {
   const { t } = useTranslation();
-  const [open, setOpen] = useState(!false);
+  const [open, setOpen] = useState(false);
 
   const DocsLinksContent = () => (
     <div>
       <ol className="flex flex-wrap px-5 gap-5">
         {techData.map((data, index) => (
-          <li>
+          <li key={index}>
             <a
               className="flex flex-col items-center group"
               href={data.url}

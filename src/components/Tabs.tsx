@@ -1,11 +1,11 @@
 import { Component } from "react";
 
-type TabProps = {
+export type TabProps = {
   title: string;
   content: React.ReactNode;
 };
 
-type Props = {
+export type Props = {
   tabs: TabProps[];
 };
 
@@ -39,6 +39,7 @@ class Tabs extends Component<Props, States> {
             const activeStyle = index === activeTab ? "text-pink-400" : "";
             return (
               <button
+                data-testid={`tab-button-${index}`}
                 key={tab.title}
                 onClick={() => this.setState({ activeTab: index })}
                 className={`${activeStyle} block px-5`}
