@@ -15,5 +15,6 @@
   "Framer Motion": "A rich and extensive motion library for React",
   "i18next": "An excellent internationalization framework for JavaScript",
   "React Icons": "Opulent icon library for React from popular sources",
-  "Zod": "TypeScript-first schema validation with static type inference"
+  "Zod": "TypeScript-first schema validation with static type inference",
+  "panel_disclaimer": "This component serves as a quicklinks to the devtools used within the template. Feel free to delete this component if you don't need it or after your development."
 }

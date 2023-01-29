@@ -49,25 +49,21 @@ function ReferencePane(): JSX.Element {
           >
             <header className="border-b border-solid border-gray-200 dark:border-gray-600 flex">
               <div className="border-r border-solid border-gray-200 dark:border-gray-600 w-16"></div>
-              <div className="p-5">Reference Panel</div>
+              <div className="p-5">{t("Reference Panel")}</div>
             </header>
             <main>
               <section className="p-5 border-b border-solid border-gray-200 dark:border-gray-600 bg-gray-300/50 dark:bg-gray-800/50">
-                <p>
-                  This component serves as a quicklinks to the devtools used
-                  within the template. Feel free to delete this component if you
-                  don't need it or after your development.
-                </p>
+                <p>{t("panel_disclaimer")}</p>
               </section>
 
               <Tabs
                 tabs={[
                   {
-                    title: "Docs Links",
+                    title: t("Docs Links"),
                     content: <DocsLinksContent />,
                   },
                   {
-                    title: "Template Features",
+                    title: t("Template Features"),
                     content: <TemplateFeaturesContent />,
                   },
                 ]}
