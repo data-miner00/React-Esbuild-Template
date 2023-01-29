@@ -42,5 +42,9 @@
   {
     "title": "Zod",
     "url": "https://zod.dev/"
+  },
+  {
+    "title": "Playwright",
+    "url": "https://playwright.dev/"
   }
 ]

@@ -3,10 +3,37 @@ import { useTranslation } from "react-i18next";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 import techData from "../data/TechnologyData.json";
+import Tabs from "./Tabs";
 
 function ReferencePane(): JSX.Element {
   const { t } = useTranslation();
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(!false);
+
+  const DocsLinksContent = () => (
+    <div>
+      <ol className="flex flex-wrap px-5 gap-5">
+        {techData.map((data, index) => (
+          <li>
+            <a
+              className="flex flex-col items-center group"
+              href={data.url}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <div className="flex justify-center items-center h-16 w-16 border border-solid dark:border-gray-600 border-gray-200 group-hover:border-pink-400 group-hover:text-pink-400">
+                <span className="block font-bold text-2xl">{index + 1}</span>
+              </div>
+              <div className="w-16 overflow-hidden overflow-ellipsis text-center group-hover:text-pink-400">
+                {data.title}
+              </div>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </div>
+  );
+
+  const TemplateFeaturesContent = () => <div>To be added.</div>;
 
   return (
     <>
@@ -32,12 +59,19 @@ function ReferencePane(): JSX.Element {
                   don't need it or after your development.
                 </p>
               </section>
-              <nav className="flex my-5">
-                <button className="block px-5 border-r border-solid border-gray-600">
-                  Docs Links
-                </button>
-                <button className="block px-5">Template Features</button>
-              </nav>
+
+              <Tabs
+                tabs={[
+                  {
+                    title: "Docs Links",
+                    content: <DocsLinksContent />,
+                  },
+                  {
+                    title: "Template Features",
+                    content: <TemplateFeaturesContent />,
+                  },
+                ]}
+              />
             </main>
           </aside>
         </div>
