@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 import techData from "../data/TechnologyData.json";
+import features from "../data/PanelFeatures.json";
 import Tabs from "./Tabs";
 
 function ReferencePane(): JSX.Element {
@@ -33,7 +34,18 @@ function ReferencePane(): JSX.Element {
     </div>
   );
 
-  const TemplateFeaturesContent = (): JSX.Element => <div>To be added.</div>;
+  const TemplateFeaturesContent = (): JSX.Element => (
+    <ul className="px-5 flex flex-col gap-5">
+      {features.map(({ feature, id, disabled }) => (
+        <li key={feature}>
+          <div className="">
+            <h3 className="text-xl font-bold mb-1">{feature}</h3>
+            <p dangerouslySetInnerHTML={{ __html: t(id) }}></p>
+          </div>
+        </li>
+      ))}
+    </ul>
+  );
 
   return (
     <>
