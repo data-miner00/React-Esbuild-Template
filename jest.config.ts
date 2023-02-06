@@ -11,4 +11,5 @@ export default {
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
   transformIgnorePatterns: ["<rootDir>/node_modules"],
   testPathIgnorePatterns: ["\\.steps\\.[jt]sx?$"],
+  modulePathIgnorePatterns: ["<rootDir>/e2e"],
 } as Config;

@@ -6,7 +6,7 @@ import { snackbarMotion } from "../motions/snackbarMotion";
 
 export type SnackbarType = "info" | "warn" | "error" | "success" | "unset";
 
-interface Props {
+export interface Props {
   message: string;
   type: SnackbarType;
   show: boolean;
@@ -32,6 +32,7 @@ function getIcon(type: SnackbarType): ReactNode {
     case "info": {
       return (
         <svg
+          data-testid="snackbar-icon-info"
           xmlns="http://www.w3.org/2000/svg"
           width="16"
           height="16"
@@ -46,6 +47,7 @@ function getIcon(type: SnackbarType): ReactNode {
     case "success": {
       return (
         <svg
+          data-testid="snackbar-icon-success"
           xmlns="http://www.w3.org/2000/svg"
           width="16"
           height="16"
@@ -60,6 +62,7 @@ function getIcon(type: SnackbarType): ReactNode {
     case "warn": {
       return (
         <svg
+          data-testid="snackbar-icon-warn"
           xmlns="http://www.w3.org/2000/svg"
           width="16"
           height="16"
@@ -74,6 +77,7 @@ function getIcon(type: SnackbarType): ReactNode {
     case "error": {
       return (
         <svg
+          data-testid="snackbar-icon-error"
           xmlns="http://www.w3.org/2000/svg"
           width="16"
           height="16"
@@ -87,7 +91,7 @@ function getIcon(type: SnackbarType): ReactNode {
     }
 
     default: {
-      return <div></div>;
+      return <div data-testid="snackbar-icon-empty"></div>;
     }
   }
 }
@@ -98,13 +102,17 @@ function Snackbar({ type, message }: Props): JSX.Element {
 
   return (
     <motion.div
+      data-testid="snackbar"
       variants={snackbarMotion}
       initial="hidden"
       animate="show"
       exit="hidden"
       className={`${color} flex items-center w-fit py-2 px-5 rounded-lg fixed bottom-9 left-1/2 transform -translate-x-1/2`}
     >
-      {icon} <span className="block ml-2">{message}</span>
+      {icon}{" "}
+      <span data-testid="snackbar-message" className="block ml-2">
+        {message}
+      </span>
     </motion.div>
   );
 }

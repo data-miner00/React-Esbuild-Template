@@ -32,3 +32,8 @@ coverage
 .env.test.local
 .env.production.local
 .env.local
+
+# Playwright e2e results
+/test-results/
+/playwright-report/
+/playwright/.cache/
