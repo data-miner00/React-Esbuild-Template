@@ -1,6 +1,7 @@
 var esbuild = require("esbuild");
 var inlineImage = require("esbuild-plugin-inline-image");
 var dotenv = require("dotenv");
+var chalk = require("chalk");
 
 dotenv.config();
 
@@ -38,21 +39,29 @@ esbuild
         var now = new Date();
         if (error) {
           console.log(
-            "🙈\x1b[2m %s: \x1b[0m\x1b[37m\x1b[41m%s\x1b[0m %s",
-            now.toTimeString(),
-            "FAILURE",
+            "%s: %s %s",
+            chalk.gray(now.toTimeString()),
+            chalk.redBright("FAILURE"),
             error.message
           );
         } else {
           console.log(
-            "🐻‍❄️\x1b[2m %s: \x1b[0m\x1b[30m\x1b[42m%s\x1b[0m %s",
-            now.toTimeString(),
-            "COMPLETE",
-            "Build successful"
+            "%s: %s %s",
+            chalk.gray(now.toTimeString()),
+            chalk.greenBright("COMPLETE"),
+            "Rebuilt Successfully"
           );
         }
       },
     },
   })
-  .then(() => console.log("Initialize successful. Watching for changes..."))
+  .then(() =>
+    console.log(
+      "%s %s: %s\n%s\n",
+      chalk.yellow("esbuild"),
+      chalk.underline("watch mode"),
+      chalk.blue("ENABLED"),
+      "Watching for changes..."
+    )
+  )
   .catch(() => process.exit(1));
