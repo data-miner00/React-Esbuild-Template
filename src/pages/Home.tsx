@@ -14,7 +14,7 @@ function Home(): JSX.Element {
   const { t } = useTranslation();
 
   return (
-    <main className="">
+    <main className="px-10 md:px-0 pb-10 md:pb-0">
       <header className="mt-4 mb-16">
         <motion.h1
           className="my-awesome-h1"
