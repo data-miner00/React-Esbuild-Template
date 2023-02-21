@@ -206,7 +206,6 @@ _To use this template for personal use or contribution, simply perform the follo
   - [ ] Chinese
 - [ ] Authentication
   - [ ] OAuth 2.0? OpenID Connect?
-- ~[ ] Prisma~
 - [x] Dark mode
 - [x] Add GitHub workflows
 - [ ] Add PWA Manifest
