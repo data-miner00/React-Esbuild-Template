@@ -261,6 +261,7 @@ List of resources that are helpful and would like to give credit to.
 - [GitHub Actions](https://github.com/marketplace?type=actions)
 - [Pnpm CI](https://pnpm.io/continuous-integration)
 - [global is not defined](https://github.com/WalletConnect/walletconnect-monorepo/issues/1144)
+- [[BUG] playwright install does not respect playwright version in package.json](https://github.com/microsoft/playwright/issues/19562)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

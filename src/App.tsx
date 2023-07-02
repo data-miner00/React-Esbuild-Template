@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Loading from "./components/Loading";
 import ReferencePane from "./components/ReferencePane";
 import "./App.css";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 const Home = lazy(async () => await import("./pages/Home"));
 const Features = lazy(async () => await import("./pages/Features"));
@@ -15,14 +16,17 @@ const App = (): JSX.Element => (
   <div>
     <Header />
     <ReferencePane />
-    <React.Suspense fallback={<Loading />}>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/features" element={<Features />} />
-        <Route path="/about" element={<About />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </React.Suspense>
+
+    <ErrorBoundary fallback="Routing Error">
+      <React.Suspense fallback={<Loading />}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/features" element={<Features />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </React.Suspense>
+    </ErrorBoundary>
   </div>
 );
 
