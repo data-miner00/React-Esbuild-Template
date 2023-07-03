@@ -40,7 +40,7 @@ function ReferencePane(): JSX.Element {
         <li key={feature}>
           <div className="">
             <h3 className="text-xl font-bold mb-1">{feature}</h3>
-            <p dangerouslySetInnerHTML={{ __html: t(id) }}></p>
+            <p dangerouslySetInnerHTML={{ __html: t(id) ?? "" }}></p>
           </div>
         </li>
       ))}
