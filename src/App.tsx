@@ -13,7 +13,7 @@ const About = lazy(async () => await import("./pages/About"));
 const NotFound = lazy(async () => await import("./pages/NotFound"));
 
 const App = (): JSX.Element => (
-  <div>
+  <>
     <Header />
     <ReferencePane />
 
@@ -27,7 +27,7 @@ const App = (): JSX.Element => (
         </Routes>
       </React.Suspense>
     </ErrorBoundary>
-  </div>
+  </>
 );
 
 export default App;
