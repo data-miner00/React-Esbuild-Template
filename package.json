@@ -67,6 +67,7 @@
     "typescript": "^4.9.5"
   },
   "dependencies": {
+    "@uidotdev/usehooks": "^2.0.1",
     "framer-motion": "^7.10.3",
     "i18next": "^22.5.1",
     "react": "^18.2.0",
