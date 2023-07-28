@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import App from "./App";
 import ErrorBoundary from "./components/ErrorBoundary";
+import reportWebVitals from "./reportWebVitals";
 
 import "./i18n";
 
@@ -19,3 +20,6 @@ root.render(
     </ErrorBoundary>
   </React.StrictMode>
 );
+
+// Pass in `console.log` for web vitals reporting
+reportWebVitals();
